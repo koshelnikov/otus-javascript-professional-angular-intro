@@ -9,20 +9,24 @@ import { WrapperNgTemplateComponent } from './wrapper-ng-template/wrapper-ng-tem
 import {RolesService} from "./roles.service";
 
 @NgModule({
-  declarations: [
-    AppComponent,
+    declarations: [
+        AppComponent,
+        CounterComponent,
+        WrapperComponent,
+        WrapperNgTemplateComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule
+    ],
+    providers: [{
+        provide: RolesService,
+        useValue: new RolesService()
+    }],
+  exports: [
     CounterComponent,
-    WrapperComponent,
-    WrapperNgTemplateComponent
+    WrapperComponent
   ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
-  providers: [{
-    provide: RolesService,
-    useValue: new RolesService()
-  }],
-  bootstrap: [AppComponent]
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

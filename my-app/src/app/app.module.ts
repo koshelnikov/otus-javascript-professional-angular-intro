@@ -9,18 +9,21 @@ import { GameComponent } from './components/game/game.component';
 import { WakaWakaDirective } from './waka-waka.directive';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MyComponent,
-    HighlightDirective,
-    MyPipe,
-    GameComponent,
-    WakaWakaDirective
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        MyComponent,
+        HighlightDirective,
+        MyPipe,
+        GameComponent,
+        WakaWakaDirective
+    ],
+    imports: [
+        BrowserModule
+    ],
+    providers: [],
+    exports: [
+        HighlightDirective
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

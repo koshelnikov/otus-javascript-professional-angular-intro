@@ -24,7 +24,7 @@ export class CounterComponent implements OnInit, OnChanges, OnDestroy {
   ngOnInit(): void {
   }
 
-  onCounterClick() {
+  public onCounterClick() {
     this.counter++;
     this.counterChange.emit(this.counter);
   }
