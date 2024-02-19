@@ -1,0 +1,12 @@
+
+
+<input #search /> <button (click)="onRefreshClick()">Refresh</button>
+
+
+<span *ngFor="let role of roles$ | async">
+  {{role.id}} - {{role.name}}
+</span>
+
+
+
+<ng-content></ng-content>

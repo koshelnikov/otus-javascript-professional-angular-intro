@@ -1,0 +1,10 @@
+<h2>My Component</h2>
+
+<div >
+  User Name: {{firstName}}
+</div>
+<button (click)="isGreetingShown = !isGreetingShown">{{!isGreetingShown ? 'show' : 'hide'}}</button>
+
+<app-greeting *ngIf="isGreetingShown"/>
+
+<ng-content/>

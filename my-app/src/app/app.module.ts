@@ -22,7 +22,8 @@ import { WakaWakaDirective } from './waka-waka.directive';
     ],
     providers: [],
     exports: [
-        HighlightDirective
+        HighlightDirective,
+        MyComponent
     ],
     bootstrap: [AppComponent]
 })

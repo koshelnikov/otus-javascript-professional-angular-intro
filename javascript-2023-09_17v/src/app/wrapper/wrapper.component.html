@@ -1,0 +1,23 @@
+<h2>Wrapper Component</h2>
+<h3>ng-content</h3>
+<header>
+  <ng-content select="p"></ng-content>
+</header>
+
+<section>
+  <ng-content></ng-content>
+</section>
+
+<br/>
+<h3>ng-container</h3>
+<ng-container *ngIf="true">
+  Some
+  <ng-container *ngIf="true" [ngTemplateOutlet]="templateRef">
+
+  </ng-container>
+</ng-container>
+
+
+<ng-template #templateRef>
+  <p>Template Content</p>
+</ng-template>

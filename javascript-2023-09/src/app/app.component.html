@@ -1,0 +1,13 @@
+<h1>App Component</h1>
+<input [(ngModel)]="title"/>
+
+<br/>
+<button (click)="isShown = !isShown">{{isShown ? 'hide' : 'show'}}</button>
+<br/>
+<app-my *ngIf="isShown" [firstName]="title">
+  <div>This content is projected</div>
+</app-my>
+
+
+
+
